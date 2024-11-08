@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6891064a7e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Đăng Nhập</title>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="box_lienhe">
+            <div class="lienhe">
+                <i style="border: 1px black solid; font-size: 15px;padding: 12px;border-radius: 50%;" class="fa-solid fa-phone"></i>
+                <h3 style="color: red;text-decoration: underline black;">0123456789</h3>
+            </div>
+        </div>
+        <div class="logo_other">
+           <a href="./index.html"> <img src="./img/logoo.png" alt="" style="width: 10%;"></a>
+           <div class="other">
+            <li id="search"><i id="bt_search" class="fa-solid fa-magnifying-glass"></i></li>
+            <form action="timkiem.html" method="get" name="frm_search" class="box_search" id="box_search">
+                <input name="words" id="input_search" type="text" placeholder="Tim kiem " onkeydown="checkKey(event)">
+                <button id="button_search" type="submit">Tìm Kiếm</button>
+            </form>
+            <li><a href="./dangnhap.html"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="./giohang.html"><i class="fa-solid fa-cart-shopping"></a></i></li>
+        </div>
+        </div>
+        <div class="thanh_chon">
+            <div><a href="./index.html"><h1>Trang chủ</h1></a></div>
+            <div><a href="./bongda.html"><h1>Bóng đá</h1></a></div>
+            <div><a href="./bongchuyen.html"><h1>Bóng chuyền</h1></a></div>
+            <div><a href="./caulong.html"><h1>Cầu lông</h1></a></div>
+            <div><a href="./bongban.html"><h1>Bóng bàn</h1></a></div>
+            <div><a href="./pickleball.html"><h1>Pickleball</h1></a></div>
+        </div>
+    </header>
+    <main>
+        <div class="Layeraccount">
+            <div class="title">
+                <h1 style="color: #252A2B; font-size: 54px; font-family: 'Quicksand', sans-serif;">Đăng Nhập</h1>
+                <hr class="custom-hr">
+            </div>
+            <div id="login" class="userbox" style="padding: 60px 15px; font-size: 14px;font-family: Quicksand,sans-serif;">
+                <form onsubmit="return validateForm(this);"> 
+                    <input type="text" id="username" name="username" placeholder="Email" style="border: none;width: 60%;height: 40px;background-color: #EDEDED; padding: 0px 20px;" required>
+                    <br>    
+                    <br>
+                    <input type="password" id="password" name="password" placeholder="Mật Khẩu" style="border: none;width: 60%;height: 40px;background-color: #EDEDED; padding: 0px 20px;" required>
+                    <br>
+                    <br>
+                    <button class="signin" type="submit" style="margin-bottom: 15px;color: #EDEDED;font-weight: 600;text-transform: uppercase;display: inline-block; ;background-color: red;border: none;padding: 0px 30px;height: 55px;">Đăng Nhập</button>
+                    <div class="quenmatkhau" style="color: #959898;">
+                        <a href="" style="font-size: 17px;">Quên mật khẩu?</a>
+                        <br> hoặc
+                        <a href="./dangky.html" style="font-size: 17px;">Đăng Ký</a>
+                    </div>
+                    <div class="othersign">
+                        <h3 style="text-transform: uppercase;color: #252A2B;font-size: 18px;font-family:sans-serif;margin: 0px 0px 13px 0px;">Đăng nhập qua mạng xã hội</h3>
+                        <a href=""><img style="border: 2px solid black;width: 250px;height: 30px;" src="./img/DangNhap/google.jpg" alt=""></a> <br>
+                        <a href=""><img style="width: 250px;height: 30px;" src="./img/DangNhap/facebook.jpg" alt=""></a>
+
+                    </div>
+                </form>
+            </div>
+
+
+    </div>
+    </main>
+    <footer>
+        <div class="logo">
+            <a href="./index.html"><img style="height: 200px;" src="./img/logoo.png" alt=""></a>
+        </div>
+        <div class="in4_tv">
+            <a  href="https://www.facebook.com/lovekskb"><i style="width:30px;font-size: 30px;height: 20px;margin-right: 20px;" class="fa-brands fa-facebook"></i><h3 style="font-size: 25px;color: black;">Triệu Tấn Tài</h3></a>
+            <a  href="https://www.facebook.com/bahoang.luu.52"><i style="width:30px;font-size: 30px;height: 20px;margin-right: 20px;" class="fa-brands fa-facebook"></i><h3 style="font-size: 25px;color: black;">Lưu Bá Hoàng</h3></a>
+            <a  href="https://www.facebook.com/yasuo.trung.140"><i style="width:30px;font-size: 30px;height: 20px;margin-right: 20px;" class="fa-brands fa-facebook"></i><h3 style="font-size: 25px;color: black;">Đặng Chí Trung</h3></a>
+            <a  href="https://www.facebook.com/profile.php?id=100031315239305"><i style="width:30px;font-size: 30px;height: 20px;margin-right: 20px;" class="fa-brands fa-facebook"></i><h3 style="font-size: 25px;color: black;">Nguyễn Phương Như</h3></a>
+        </div>
+        <div class="nguon_sp">
+            <a href="https://kamito.vn/"><img src="./img/logo_Kamito.png" alt=""></a>
+            <h3>Nguồn hình và thông tin sản phẩm được lấy từ trang Kamito.vn</h3>
+        </div>
+        <i id="go_top" class="fa-solid fa-up-long"></i>
+    </footer>
+<script src="main.js"></script>
+</body>
+</html>

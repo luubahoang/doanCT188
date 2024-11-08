@@ -1,0 +1,650 @@
+/* ----code chung cho tất cả các trang----- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display:grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+}
+header,main,footer{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+header{ 
+    grid-area: header;
+    margin-top: 5px;
+}
+/*----------------sdt dau trang-----------*/
+.box_lienhe{
+    height: 60px;
+    background-color: #f3f3f3;
+    width: 100%;
+    padding: 10px 40px;
+}
+.lienhe{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    line-height: 42px;
+    float: right;
+
+}
+.fa-phone{
+    animation: anim_phone 1s infinite alternate;
+}
+@keyframes anim_phone{
+    0% {transform:rotate(0deg)}
+    50%{transform:rotate(15deg)}
+    100%{transform:rotate(-15deg)}
+}
+/*-----------------logo-taikhoan-giohang------------*/
+.logo_other{
+    width: 100%;
+    text-align: center;
+    line-height: 100%;
+    position: relative;
+}
+.other{
+    display: flex;
+    position: absolute;
+    right: 2cm;
+    width: 15%;
+    top: 50%;
+    justify-content: space-between;
+}
+.logo_other li{
+    list-style: none;
+    font-size: 30px;
+    float: right;
+}
+/*-----------thanh lua chon--------------*/
+.thanh_chon{
+    padding: 10px;
+    width: 100%;
+}
+.thanh_chon div{
+    margin: 0 10px;
+    float: left;
+    min-width: 15.5%; 
+    text-align: center;
+    
+}
+.thanh_chon a{
+    color: black;
+    text-decoration: none;
+}
+.thanh_chon a:hover{
+    color: red;
+}
+/*---------------giuatrang----------------- */
+main{
+    grid-area: "main";
+    margin-top: 5px;
+}
+/*---------------chan trang-----------------*/
+footer{
+    grid-area: footer;
+    display:grid;
+    grid-template-areas: "left main right";
+    grid-template-columns: 1fr 2fr 2fr;
+    min-height: 300px;
+    margin-top: 5px;
+    padding: 0 100px;
+}
+#go_top{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: fixed;
+    font-size: 30px;
+    z-index: 100;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+    padding: 10px 0;
+    border: 1px grey solid;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+}
+#go_top:hover{
+    color: #f3f3f3;
+    background-color: black;
+}
+
+.in4_tv a{
+    text-decoration: none;
+    position: relative;
+    left: 20%;
+    top: 10%;
+}
+.logo{
+    display: grid;
+   grid-area: left;
+   place-items: center;
+}
+
+/*-------------trên là code chung cho tất cả các tràn------------ */
+/* ------- trang chủ--------- */
+/******----------Sp moi-----------------------*/
+#arrow_right,#arrow_left{
+    position: absolute;
+    font-size: 40px;
+    line-height: 402px;
+    z-index: 10;
+    cursor: pointer;
+}
+.quang_cao{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+        
+.quang_cao img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    top: 0;
+    left: 0;
+}
+.quang_cao img.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+    .quang_cao {
+        height: 50vh;
+    }
+}
+    
+        
+#sp_moi{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 10px;
+}
+/*-------------------nhan thong tin qua email----------------*/
+.nhan_thong_tin_qua_email{
+    display: grid;
+    width: 100%;
+    height: 70px;
+    background-color:yellowgreen;
+    place-items: center;
+}
+.nhan_thong_tin_qua_email>div{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+}
+.trai_{
+    align-items: center;
+    width: 300px;
+}
+.nhan_thong_tin_qua_email>div>div{
+    margin: 0 20px;
+    display: flex;
+}
+.box_nhap_email{
+    width: 100%;
+    height: 30px;
+}
+.box_nhap_email>input{
+    width: 100%;
+    position: relative;
+    padding-left: 10px;
+}
+.box_nhap_email button{
+    width: 80px;
+    border-radius: 0;
+    background-color: red;
+    color: white;
+}
+#sp_noibat{
+    width: 100%;
+    display: grid;
+    grid-template-areas:"banner sp1 sp2 sp3";
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 20px;
+}
+#sp_noibat > .banner{
+    grid-area: banner;
+    width: 100%;
+    height: 450px;
+}
+#sp_noibat > .banner > img{
+    width: 100%;
+    height: 100%;
+}
+
+/*-------Đăng nhập---------- */
+.custom-hr {
+    border: none; 
+    border-top: 3px solid black;
+    width: 6cm; 
+    margin: 8px auto auto 240px; 
+    position: relative;
+    left: 120px;
+  }
+.quenmatkhau a {
+    font-size: 14px;
+    font-family: serif;
+    color: #252A2B;
+    text-decoration: none;
+}
+.othersign{
+    padding-top: 30px;
+
+}
+.othersign img{
+    width: 50px;
+}
+.Layeraccount{
+    width: 100%;
+    display: flex;
+}
+.title{
+    padding-top: 140px; 
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.userbox{
+    float: right;
+    width: 50%;
+    text-align: center;    
+}
+.back{
+    text-decoration: none;
+    color: #252A2B;
+}
+/*-------Bóng đá-----------  */
+.bongDa{
+    background-color: bisque;
+    border: 1px solid black;
+    min-height: 50px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+.bongDa:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 20px 3px rgb(39, 100, 156);
+}
+.bongDa img{
+    width: 95%;
+    padding-top: 8px;
+    border-radius: 20px;
+}
+.bongDa h3{
+    margin-top: 10px;
+}
+.bongDa h3:hover{
+    color: red;
+}
+.bongDa p{
+    margin-top: 7px;
+}
+.bongDa input{
+    margin-top:15px ;
+    margin-bottom:15px ;
+}
+.bongDa input:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(127, 155, 192);
+}
+.bongDa button:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(161, 108, 152);
+}
+.bodybongda1{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 10px;
+}
+/*-------Bóng chuyền---------  */
+.bongChuyen{
+    background-color: bisque;
+    border: 1px solid black;
+    min-height: 50px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+.bongChuyen:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 20px 3px rgb(39, 100, 156);
+}
+.bongChuyen img{
+    width: 95%;
+    padding-top: 8px;
+    border-radius: 20px;
+}
+.bongChuyen h3{
+    margin-top: 10px;
+}
+.bongChuyen h3:hover{
+    color: red;
+}
+.bongChuyen p{
+    margin-top: 7px;
+}
+.bongChuyen input{
+    margin-top:15px ;
+    margin-bottom:15px ;
+}
+.bongChuyen input:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(127, 155, 192);
+}
+.bongChuyen button:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(161, 108, 152);
+}
+.bodybongchuyen1{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 10px;
+}
+/*---------Cầu Lông---------- */
+.cauLong{
+    background-color: bisque;
+    border: 1px solid black;
+    min-height: 50px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+.cauLong:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 20px 3px rgb(39, 100, 156);
+}
+.cauLong img{
+    width: 95%;
+    padding-top: 8px;
+    border-radius: 20px;
+}
+.cauLong h3{
+    margin-top: 10px;
+}
+.cauLong h3:hover{
+    color: red;
+}
+.cauLong p{
+    margin-top: 7px;
+}
+.cauLong input{
+    margin-top:15px ;
+    margin-bottom:15px ;
+}
+.cauLong input:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(127, 155, 192);
+}
+.cauLong button:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(161, 108, 152);
+}
+.bodycaulong1{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 10px;
+}
+/*---------Bóng bàn---------- */
+.bongBan{
+    background-color: bisque;
+    border: 1px solid black;
+    min-height: 50px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+.bongBan:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 20px 3px rgb(39, 100, 156);
+}
+.bongBan img{
+    width: 95%;
+    padding-top: 8px;
+    border-radius: 20px;
+}
+.bongBan h3{
+    margin-top: 10px;
+}
+.bongBan h3:hover{
+    color: red;
+}
+.bongBan p{
+    margin-top: 7px;
+}
+.bongBan input{
+    margin-top:15px ;
+    margin-bottom:15px ;
+}
+.bongBan input:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(127, 155, 192);
+}
+.bongBan button:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(161, 108, 152);
+}
+.bodybongban1{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 10px;
+}
+/*---------Pickleball---------- */
+.pickleball{
+    background-color: bisque;
+    border: 1px solid black;
+    min-height: 50px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+.pickleball:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 20px 3px rgb(39, 100, 156);
+}
+.pickleball img{
+    width: 95%;
+    padding-top: 8px;
+    border-radius: 20px;
+}
+.pickleball h3{
+    margin-top: 10px;
+}
+.pickleball h3:hover{
+    color: red;
+}
+.pickleball p{
+    margin-top: 7px;
+}
+.pickleball input{
+    margin-top:15px ;
+    margin-bottom:15px ;
+}
+.pickleball input:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(127, 155, 192);
+}
+.pickleball button:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(161, 108, 152);
+}
+.bodypickleball1{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 10px;
+}
+/*-------tất cả sản phẩm---- */
+.shopthethao p{
+    color: red;
+}
+/* -------Giỏ hàng-------- */
+#bocucgiohang th{
+    line-height: 500%;
+    width: 50px;
+    background-color: aqua;
+    font-weight: 900;
+    font-size: 20px;
+}
+#mycart img{
+    width: 20%;
+}
+#giohangdathang button{
+    width: 10%;
+    line-height: 200%;
+    position: relative;
+    float: right;
+    right: 50px;
+    font-size: 25px;
+    background-color: aqua;
+    font-weight: 800;
+    margin: 10px;
+}
+#giohangdathang button:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 5px rgb(255, 238, 0);
+}
+#tongdonhang td{
+    line-height: 400%;
+    font-weight: 700;
+    font-size: 15px;
+    background-color: aqua;
+}
+/***********************************cap nhat chan trang**************************************************************/
+
+.in4_tv{
+    display: grid;
+    padding-left: 30%;
+}
+.in4_tv >a{
+    margin: 15px 0;
+    display:flex;
+    text-decoration: none;
+    left: 20%;
+    top: 10%;
+    
+}
+/*-----------------tim kiem---------------------*/
+
+
+.bt_search{
+    position: relative;
+}
+#bt_search{
+    cursor: pointer;
+}
+.box_search{
+    position: absolute;
+    border-radius: 5px;
+    background-color:aliceblue;
+    width:150%;
+    height: 400% ;
+    top: 30px;
+    right: 254px;
+    z-index: 10;
+    border: 1px grey solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;   
+    visibility: hidden; 
+    transform: translateY(-20px);  
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+}
+.box_search.show{
+    opacity: 1;           
+    visibility: visible;
+    transform: translateY(0);
+}
+.box_search > input{
+    padding-left: 10px;
+    height: 30%;
+    font-size: 100%;
+}
+.box_search >button{
+    width: 15%;
+    height: 30%;
+    padding: 3px;
+    cursor: pointer;
+}
+/*--------trang tim kiem------------*/
+.sp{
+    background-color: bisque;
+    border: 1px solid black;
+    min-height: 50px;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+.sp:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 20px 3px rgb(39, 100, 156);
+}
+.sp img{
+    width: 95%;
+    padding-top: 8px;
+    border-radius: 20px;
+}
+.sp h3{
+    margin-top: 10px;
+}
+.sp h3:hover{
+    color: red;
+}
+.sp p{
+    margin-top: 7px;
+}
+.sp input{
+    margin-top:15px ;
+    margin-bottom:15px ;
+}
+.sp input:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(127, 155, 192);
+}
+.sp button:hover{
+    margin: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(161, 108, 152);
+}
+#body_hienthi{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: 10px;
+}
+/*----------------------------*/
+.nguon_sp{
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "logo text";
+    grid-template-columns: 1fr 3fr;
+    padding-left: 50px;
+    padding-right: 150px;
+    
+}
+.nguon_sp >a{
+    grid-area: logo;
+    padding-top: 50px;
+}
+.nguon_sp >h3{
+    text-align: center;
+    padding-top: 110px ;
+}
