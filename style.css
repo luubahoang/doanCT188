@@ -83,6 +83,9 @@ header{
 .thanh_chon a:hover{
     color: red;
 }
+.thanh_chon h1{
+    font-size: 35px;
+}
 /*---------------giuatrang----------------- */
 main{
     grid-area: "main";
@@ -118,11 +121,15 @@ footer{
     color: #f3f3f3;
     background-color: black;
 }
-
+.in4_tv{
+    position: relative;
+    right: 35%;
+    line-height: 0.4;
+}
 .in4_tv a{
     text-decoration: none;
     position: relative;
-    left: 20%;
+    left: 10%;
     top: 10%;
 }
 .logo{
@@ -496,6 +503,15 @@ footer{
 .shopthethao p{
     color: red;
 }
+.shopthethao h3{
+    font-size: 20px;
+}
+.shopthethao input{
+    border-radius: 5px;
+}
+.shopthethao button{
+    border-radius: 10px;
+}
 /* -------Giỏ hàng-------- */
 #bocucgiohang th{
     line-height: 500%;
@@ -632,19 +648,20 @@ footer{
 /*----------------------------*/
 .nguon_sp{
     width: 100%;
-    display: grid;
-    grid-template-areas: 
-    "logo text";
-    grid-template-columns: 1fr 3fr;
     padding-left: 50px;
     padding-right: 150px;
-    
+    position: relative;
+    right: 30%;
 }
 .nguon_sp >a{
     grid-area: logo;
     padding-top: 50px;
 }
 .nguon_sp >h3{
+    height: 100px;
     text-align: center;
     padding-top: 110px ;
+    position: relative;
+    left: 60%;
+    bottom: 70%;
 }
